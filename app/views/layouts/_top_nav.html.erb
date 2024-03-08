@@ -66,6 +66,24 @@
           My Cart (<%= cart.size %>) <% end %>
         </li>
       </ul>
+      <ul class="navbar-nav">
+        <% if current_user %>
+          <li class="nav-item">
+            <span><%= "#{current_user.first_name} #{current_user.last_name}" %></span>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Logout", '/logout', class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to 'Login', '/login', class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Register', '/users/new', class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+
     </div>
   </div>
 </nav>
