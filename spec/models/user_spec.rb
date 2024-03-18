@@ -148,7 +148,7 @@ RSpec.describe User, type: :model do
       expect(@user1.id).to be_present
       expect(@user1.first_name).to eq('Bilbo')
       expect(@user1.last_name).to eq('Baggins')
-      expect(@user1.email).to eq('bilboB@shire.com')
+      expect(@user1.email).to eq('BilboB@Shire.com')
     end
 
     it 'does not authenticate with an non-existent email' do
